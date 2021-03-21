@@ -21,3 +21,25 @@ button {
 #pMostrar {
     visibility: hidden;
 }
+.ejercicios {
+    border: grey 1px solid ;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    max-width: 600px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form input {
+    align-content: space-around;
+    width: 250px;
+}
+form button {
+    width: 250px;
+    margin: 5px;
+}
+#ejercicio06 {
+    display: flex;
+    align-items: center;
+}

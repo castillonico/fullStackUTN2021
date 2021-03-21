@@ -22,16 +22,46 @@ function aumentarTam(){
 /*Ejercicio 03*/
 const mostrar = document.querySelector("#btnMostrar"); /*selecciono el botón de mostrar*/
 mostrar.addEventListener("click", fncMostrar); /*agrego listener al botón*/
-const ocultar =document.querySelector("#btnOcultar"); /*selecciono el botón de ocultar*/
+const ocultar = document.querySelector("#btnOcultar"); /*selecciono el botón de ocultar*/
 ocultar.addEventListener("click", fncOcultar); /*agrego listener a ocultar*/
-
 function fncMostrar(){
-    console.log ("funcion mostrar");
-    document.getElementById("pMostrar").style.visibility = "visible";
+    console.log ("muestro parrafo oculto");
+    document.getElementById("pMostrar").style.visibility = "visible"; /*cambio el estilo CSS para mostrar el parrafo oculto*/
+}
+function fncOcultar(){
+    console.log ("oculto un parrafo que estaba visible");
+    document.getElementById("pOcultar").style.visibility = "hidden"; /*cambio el estilo CSS para ocultar el parrafo visible*/
 }
 
-function fncOcultar(){
-    console.log ("funcion ocultar");
-    document.getElementById("pOcultar").style.visibility = "hidden";
 
+/*Ejercicio 05*/ 
+
+
+/*Ejercicio 06 */
+const sobreEj06 =document.querySelector("#ejercicio06");
+sobreEj06.addEventListener("mouseover", cambioFondo);
+sobreEj06.addEventListener("mouseout", resetEj06);
+function cambioFondo(){
+    document.getElementById("ejercicio06").style.background = "#e1e0e4";
+}
+function resetEj06(){
+    document.getElementById("ejercicio06").style.background = "#fefefe";
+}
+const btnOscuro = document.querySelector("#dark");
+btnOscuro.addEventListener("click", goDark); 
+function goDark () {
+    console.log("cambio a modo oscuro");
+    document.body.style.background = "#444645";
+}
+const btnAzul = document.querySelector("#goBlue"); 
+btnAzul.addEventListener("click", goAzul); 
+function goAzul(){
+    console.log("pasamos a modo azul"); 
+    document.body.style.background = "#96c2f1"; 
+}
+const btnResetear = document.querySelector("#resetear"); 
+btnResetear.addEventListener("click", goClaro);
+function goClaro(){
+    console.log("pasamos a Modo Claro"); 
+    document.body.style.background = "#fefefe"; 
 }

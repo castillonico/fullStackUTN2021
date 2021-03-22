@@ -33,6 +33,8 @@ function fncOcultar(){
     document.getElementById("pOcultar").style.visibility = "hidden"; /*cambio el estilo CSS para ocultar el parrafo visible*/
 }
 
+/*Ejercicio 04*/ 
+/* Es mostrar una URL que ya está resuelto en HTML */
 
 /*Ejercicio 05*/ 
 
@@ -64,4 +66,21 @@ btnResetear.addEventListener("click", goClaro);
 function goClaro(){
     console.log("pasamos a Modo Claro"); 
     document.body.style.background = "#fefefe"; 
+}
+
+
+/* Ejercicio 07 
+const txtMinus = document.getElementById("aMayus");
+const txtMayus = txtMinus.toUpperCase.call();
+console.log(txtMinus); */
+
+/* Ejercicio 08*/ 
+var cantA; 
+var aContar; 
+aContar = document.getElementById("conteo");
+console.log(aContar);
+contar();
+function contar(){
+    cantA = aContar.getElementsByTagName('a').length;
+    console.log (cantA);
 }

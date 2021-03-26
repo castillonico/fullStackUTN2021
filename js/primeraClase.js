@@ -49,7 +49,7 @@ function cargaApellido(){
 
 
 //Ejercicio 06 
-let sobreEj06 =document.querySelector("#ejercicio06");
+let sobreEj06 = document.querySelector("#ejercicio06");
 sobreEj06.addEventListener("mouseover", cambioFondo);
 sobreEj06.addEventListener("mouseout", resetEj06);
 function cambioFondo(){

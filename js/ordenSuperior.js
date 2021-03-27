@@ -3,7 +3,7 @@ console.log("Ejercicio 01");
 let teamName = "formación"; 
 let people = ["Amalia", "Karla", "Silvana", "Manu", "John", "Mike"]; 
 
-function imprimir(team, people) {
+function imprimir (team, people) {
     cant = people.length;
     console.log(`Hay ${cant}, personas en el equipo ${team}`); 
 }
@@ -22,11 +22,11 @@ const positivos = x => {
         return x = x*x;
     } else return x;
 }
-losCuadrados = primero.map(positivos);
+losCuadrados = primero.map (positivos);
 console.log(`El cuadrado de los positivos de: ${primero} son: ${losCuadrados}`);
-losCuadrados = segundo.map(positivos);
+losCuadrados = segundo.map (positivos);
 console.log(`El cuadrado de los positivos de: ${segundo} son: ${losCuadrados}`);
-losCuadrados = tercero.map(positivos);
+losCuadrados = tercero.map (positivos);
 console.log(`El cuadrado de los positivos de: ${tercero} son: ${losCuadrados}`);
 
 console.log("------------------------------------");
@@ -37,39 +37,49 @@ const pares = x => {
     } else return x;
 };
 
-todosLosPares = primero.map(pares);
+todosLosPares = primero.map (pares);
 console.log(`El cuadrado de los pares del: ${primero} son:  ${todosLosPares}`); 
-todosLosPares = segundo.map(pares);
+todosLosPares = segundo.map (pares);
 console.log(`El cuadrado de los pares del: ${segundo} son:  ${todosLosPares}`);
-todosLosPares = tercero.map(pares);
+todosLosPares = tercero.map (pares);
 console.log(`El cuadrado de los pares del: ${tercero} son:  ${todosLosPares}`);
 
 //-----------------------------------------------------------------
 // Ejercicio 03 Inventario 
 const inventario = [ 
-    {   descripción: "Coca-Cola", 
+    {
         categoria: "Bebidas", 
-        precioUni: 3
+        precioUni: 100
     }, 
-    {   descripción: "Cerveza", 
+    {
         categoria: "Bebidas", 
-        precioUni: 12
+        precioUni: 20
     }, 
-    {   descripción: "Manteca", 
+    {
         categoria: "Lacteos", 
         precioUni: 11
     } 
 ]; 
 
-
-const objBebidas = x => { 
+const filtroBebidas = x => { 
+    console.log("Filtro por la Categoría...")
     if (x.categoria === "Bebidas"){ 
         let y = x.precioUni;
         return y ; 
     } 
 }; 
-const bebidas = inventario.filter(objBebidas); 
-console.log(bebidas); 
+function recuperoPrecios (x) { 
+    console.log("Creo un arreglo con los precios de la categoría...")
+    let y = x.precioUni;
+    return y; 
+};
+const bebidas = inventario.filter (filtroBebidas); 
+console.log(bebidas);
+const todosUnit = bebidas.map (recuperoPrecios);
+console.log(todosUnit);
+let total = todosUnit.reduce ((x,y) => x += y);
+console.log(`El total de la categría es: ${total}`);
+
 
 
 //-----------------------------------------------------------------

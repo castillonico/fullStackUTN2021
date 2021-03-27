@@ -2,13 +2,14 @@
 console.log("Ejercicio 01"); 
 let teamName = "formación"; 
 let people = ["Amalia", "Karla", "Silvana", "Manu", "John", "Mike"]; 
-
+console.log(`El nombre del equipo es: ${teamName}`);
+console.log(`Los integrantes del mismo son: ${people}`);
 function imprimir (team, people) {
     cant = people.length;
     console.log(`Hay ${cant}, personas en el equipo ${team}`); 
 }
 imprimir(teamName, people); 
-
+console.log(" ");
 //-----------------------------------------------------------------
 // Ejercicio 02 SQUARE OF PAIRS 
 console.log("Ejercicio 02"); 
@@ -43,9 +44,10 @@ todosLosPares = segundo.map (pares);
 console.log(`El cuadrado de los pares del: ${segundo} son:  ${todosLosPares}`);
 todosLosPares = tercero.map (pares);
 console.log(`El cuadrado de los pares del: ${tercero} son:  ${todosLosPares}`);
-
+console.log(" ");
 //-----------------------------------------------------------------
 // Ejercicio 03 Inventario 
+console.log("Ejercicio 03");
 const inventario = [ 
     {
         categoria: "Bebidas", 
@@ -79,22 +81,10 @@ const todosUnit = bebidas.map (recuperoPrecios);
 console.log(todosUnit);
 let total = todosUnit.reduce ((x,y) => x += y);
 console.log(`El total de la categría es: ${total}`);
-
-
-
+console.log(" ");
 //-----------------------------------------------------------------
 // Ejercicio 04 CAPITALIZE 
-
-/* let unaFrase = `laboratoria mexico`; 
-console.log(unaFrase);
-let arrPalabras = unaFrase.split(" "); 
-console.log(arrPalabras);
-for (let i = 0; i < arrPalabras.length; i++) {
-    arrPalabras[i] = arrPalabras[i][0].toUpperCase() + arrPalabras[i].substr(1);
-}
-arrPalabras.join(" ");
-console.log(arrPalabras); */
-
+console.log("Ejercicio 04");
 let frase = `laboratoria mexico`;
 console.log(`La frase antes de capitalizar la primera letra de cada palabra: ${frase}`);
 

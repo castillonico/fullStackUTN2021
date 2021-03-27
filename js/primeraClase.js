@@ -80,9 +80,16 @@ function goClaro(){
 
 // Ejercicio 07 
 let txtMinus = document.getElementById("aMayus").innerText; 
-console.log(txtMinus);
-let txtMayus = txtMinus.toUpperCase(); 
-console.log(txtMayus);
+let sobreEj07 = document.getElementById("ej07");
+sobreEj07.addEventListener("mouseover", cambioMayus); 
+sobreEj07.addEventListener("mouseout", cambioMinus);
+function cambioMayus () {
+    let txtMayus = txtMinus.toUpperCase(); 
+    document.getElementById("aMayus").innerHTML = txtMayus;
+}
+function cambioMinus () {
+    document.getElementById("aMayus").innerHTML = txtMinus;
+}
 
 
 //Ejercicio 08 
